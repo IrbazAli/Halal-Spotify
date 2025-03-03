@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madnify-Halal Spotify - Web Player: Music for everyone</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="svg/logo.svg" alt="Logo">
+        </div>
+        <div class="mid-nav">
+            <div class="circle">
+                <img class="home-img" src="svg/home.svg" alt="home">
+            </div>
+            <div class="search-bar">
+                <img src="svg/search.svg" alt="search">
+                <input class="nav-input" type="text">
+                <img src="svg/bucket.svg" alt="bucket">
+            </div>
+        </div>
+        <div class="btns">
+            <button class="sign">Sign up</button>
+            <button class="log">Log in</button>
+        </div>
+    </div>
+    <!-- container or main bode -->
+    <div class="container">
+        <div class="cont-left">
+            <!-- container left side -->
+            <div class="lib-img">
+                <div class="lib">
+                    <img src="svg/library.svg" alt="library">
+                    <span>Your Library</span>
+                </div>
+                <img class="plusImg" src="svg/plus.svg" alt="plus">
+            </div>
+            <ul class="playlist" id="left-playlist">
+                <!-- <li class="song-info" >
+                    <img src="bhapa/bhappa jani.jpeg" alt="song-cover">
+                    <p class="title">Tum hi ho</p>
+                    <p class="time">04:25</p>
+                </li> -->
+            </ul>
+            <ul class="FAQS">
+                <li>Legal</li>
+                <li>Saftey and Privacy center</li>
+                <li>Privacy policy</li>
+                <li>Cookies</li>
+                <li>About Ads</li>
+                <li>Accessbility</li>
+            </ul>
+        </div>
+        <!-- container right side -->
+        <div class="cont-right">
+            <div class="padding" id="hidden">
+                <div class="popular-artist">
+                    <p class="right-heading">Popular Artists</p>
+                    <ul class="Artists">
+                        <li class="song-card" id="bhapa">
+                            <img class="rounded" src="bhapa/bhappa jani.jpeg" alt="bhappa jani">
+                            <p class="artist-name">Bhapa Jani</p>
+                            <p class="art-type">Murshad</p>
+                            <!-- Green button container -->
+                            <div class="green-btn-container">
+                                <div class="green-btn">
+                                    <img src="svg/play.svg" alt="play">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="song-card" id="junaid-jamshed">
+                            <img class="rounded" src="junaid/junaid-jamshed.jpg" alt="Junaid Jamshed">
+                            <p class="artist-name">Junaid Jamshed</p>
+                            <p class="art-type">Artist</p>
+                            <!-- Green button container -->
+                            <div class="green-btn-container">
+                                <div class="green-btn">
+                                    <img src="svg/play.svg" alt="play">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="song-card" id="nasheed">
+                            <img class="rounded" src="nasheed/nasheed.jpg" alt="nasheed">
+                            <p class="artist-name">Multiple</p>
+                            <p class="art-type">Nasheed</p>
+                            <!-- Green button container -->
+                            <div class="green-btn-container">
+                                <div class="green-btn">
+                                    <img src="svg/play.svg" alt="play">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="song-card" id="waheed-zafar">
+                            <img class="rounded" src="waheed/waheed-zafar.jpg" alt="waheed">
+                            <p class="artist-name">Waheed Zafar</p>
+                            <p class="art-type">Artist</p>
+                            <!-- Green button container -->
+                            <div class="green-btn-container">
+                                <div class="green-btn">
+                                    <img src="svg/play.svg" alt="play">
+                                </div>
+                            </div>
+                        </li>
+                        <li class="song-card" id="Arabic_Naat">
+                            <img class="rounded" src="arabic/Arabic_Naat.webp" alt="arabic">
+                            <p class="artist-name">Multiple</p>
+                            <p class="art-type">Arabic Naats</p>
+                            <!-- Green button container -->
+                            <div class="green-btn-container">
+                                <div class="green-btn">
+                                    <img src="svg/play.svg" alt="play">
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="singles">
+                    <p class="right-heading">Popular Singles</p>
+                    <ul class="Artists Singles">
+                        <!-- <li class=" song-card back-color">
+                            <img src="single/1.jpeg" alt="bhappa jani">
+                            <p class="artist-name">Allah Hu Allah</p>
+                            <p class="art-type">Unknown</p>
+                             Green button container
+                             <div class="green-btn-container">
+                                <div class="green-btn">
+                                    <img src="svg/play.svg" alt="play">
+                                </div>
+                            </div>
+                        </li> -->
+                    </ul>
+                </div>
+            </div>
+            <!-- this appears when cont-right hidden and artist is selected -->
+            <div class="album hidden" id="unhide">
+                <div class="artist-pic">
+                    <p class="artist-type listeners">Murshad-e-Azam</p>
+                    <p class="artist-title">Bhapa Jani</p>
+                    <p class="listiners">24,701,977 monthly listeners</p>
+                </div>
+                <ul class="playlist overflow album-playlist " id="playlist">
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Music player -->
+    <div class="music-player">
+        <input type="range" id="playing" name="playing" value="0" min="0" max="100" />
+        <div class="lower">
+            <div >
+                <p class="song-title"></p>
+            </div>
+            <div class="player-btns">
+                <img id="previous" src="svg/previous.svg" alt="previous">
+                <div class="round">
+                    <img id="play" src="svg/pause.svg" alt="play">
+                </div>
+                <img id="next" src="svg/next.svg" alt="next">
+            </div>
+            <div class="sound-dur">
+                <div class="volume">
+                    <img src="svg/volume.svg" alt="volume">
+                    <input type="range" id="volume" name="volume" value="10" min="0" max="100" />
+                </div>   
+                <span class="player_time"></span>
+            </div>
+        </div>
+    </div>
+    <script src="playlist.js"></script>
+    <script src="waheed.js"></script> 
+    <script src="bhapa.js"></script>
+    <script src="nasheed.js"></script>
+    <script src="junaid.js"></script>
+    <script src="arabic.js"></script>
+     <script src="single.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

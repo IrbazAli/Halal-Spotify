@@ -1,0 +1,175 @@
+/* Optional: Styling for the scrollbar */
+.playlist::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.playlist::-webkit-scrollbar-thumb {
+    background-color: #9c9494; /* Color of the scrollbar thumb */
+    border-radius: 2px; /* Rounded edges for the thumb */
+}
+
+.playlist::-webkit-scrollbar-track {
+    background-color: #1f1f1f; /* Track color */
+}
+
+/* Custom scrollbar styling */
+.cont-right::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+.cont-right::-webkit-scrollbar-track {
+    background-color: #121212; /* Matches container's background color */
+    border-radius: 8px; /* Smooth track edges */
+}
+
+.cont-right::-webkit-scrollbar-thumb {
+    background-color: #9c9494; /* White scrollbar thumb */
+    border-radius: 8px; /* Rounded thumb */
+    border: 2px solid #121212; /* Adds space between thumb and track */
+}
+
+.song-info{
+    background-color: rgb(223, 223, 234);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10%;
+    align-items: center;
+}
+.song-info img{
+    position: relative;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.right-heading{
+    font-size: 24px;
+    font-weight: 700;
+    color: aliceblue;
+}
+.song-card{
+    position: relative;
+    height: 30vh;
+    width: 11vw;
+    background-color: #121212;
+    padding: 10px;
+    margin-top: 2%;
+}
+.song-card img{
+    height: 70%;
+    width: 100%;
+}
+.rounded{
+    border-radius: 50%;
+}
+.song-card p{
+    padding: 2% 0;
+}
+.artist-name{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(255, 255, 255);
+}
+.art-type{
+    font-size: 14px;
+    font-weight: 300;
+    color: #9c9494;
+}
+.song-card:hover{
+    background-color: #1f1f1f;
+    cursor: pointer;
+}
+/* Styling for the song card */
+.song-card {
+    position: relative; /* Required to position the green-btn-container */
+    padding: 10px;
+    background-color: #121212; /* Adjusted background color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.song-card:hover {
+    background-color: #1f1f1f;
+    /* color: white; */
+    cursor: pointer;
+}
+.song-name{
+    margin-top: 10px;
+    color: #9c9494;
+}
+.artist-pic {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    background-image: url('bhapa/bhappa jani.jpeg');
+    background-size: 100% 100%; /* Ensures the image covers the element completely */
+    background-repeat: no-repeat; /* Prevents tiling of the image */
+    background-position: center; 
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    z-index: 1;
+}
+.overflow{
+    overflow-y: hidden;
+}
+.hidden{
+    display: none;
+}
+.artist-title{
+    font-size: 96px;
+    font-weight: 800;
+}
+.listiners{
+    font-size: 18px;
+    font-weight: 400;
+}
+/* Green button container styling */
+.green-btn-container {
+    position: absolute; /* Positioned relative to the song card */
+    bottom: 10px; /* Distance from the bottom of the song card */
+    right: 0px; /* Distance from the right of the song card */
+    width: 40px; /* Circle size */
+    height: 40px; /* Circle size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensures everything stays within bounds */
+}
+
+/* Green button styling */
+.green-btn {
+    position: relative;
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    background-color: green; /* Green color for the circle */
+    border-radius: 50%; /* Makes it a perfect circle */
+    display: flex;
+    align-items: center; /* Centers content vertically */
+    justify-content: center; /* Centers content horizontally */
+    transition: all 0.3s ease; /* Smooth animation */
+    opacity: 0; /* Initially hidden */
+    transform: translateY(5px); /* Moves the circle slightly downward */
+}
+
+/* Play icon inside the button */
+.green-btn img {
+    width: 20px; /* Icon size */
+    height: 20px; /* Icon size */
+}
+
+/* Hover effect for the song card */
+.song-card:hover .green-btn {
+    opacity: 1; /* Makes the green button visible */
+    transform: translateY(0); /* Moves the circle back up */
+
+}
+@media only screen and (max-width: 1049px) {
+   
+}

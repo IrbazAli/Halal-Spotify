@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: black;
+}
+.navbar {
+    position: relative;
+    display: flex;
+    padding: 3px 0;
+    margin: auto;
+    height: 9vh;
+    width: 95%;
+    background-color: rgb(0, 0, 0);
+    align-items: center;
+    justify-content: space-between; /* Align items across the navbar */
+}
+
+/* Logo Section */
+.logo {
+    display: flex; /* Use flexbox for centering */
+    align-items: center; /* Vertically align content */
+    width: 30%;
+    height: 100%;
+}
+
+.logo img {
+    height: 60%; /* Adjust size as needed */
+    margin-left: 10px; /* Optional: Add spacing */
+}
+
+/* Mid Navigation Section */
+.mid-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align vertically */
+    width: 40%;
+    height: 90%;
+}
+.home-img{
+    cursor: pointer;
+}
+.search-bar {
+    position: relative;
+    display: flex;
+    align-items: center; /* Vertically align content */
+    padding: 5px 10px; /* Add inner spacing */
+    width: 90%;
+    height: 100%;
+    background-color: #1f1f1f;
+    border-radius: 20px; /* Oval corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Shadow for a modern look */
+}
+
+.search-bar img {
+    height: 20px; /* Adjust size as needed */
+}
+
+.nav-input{
+    position: relative;
+    padding: 10px 10px;
+    border: 0;
+    width: 90%;
+    outline: none; /* Remove the outline */
+    font-size: 14px;
+    background-color: #1f1f1f;
+    color: azure;
+}
+
+/* Buttons Section */
+.btns {
+    display: flex;
+    height: 100%;
+    width: 30%;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px; /* Add space between buttons */
+}
+
+.circle {
+    height: 100%;
+    width: 8%;
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%; /* Full circle */
+}
+
+.btns button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.sign {
+    background-color: black;
+    color: aliceblue;
+    height: 70%;
+   font-weight: 600;
+}
+
+.log {
+    background-color: aliceblue;
+    height: 100%;
+    width: 8vw;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+/******************************container or main part*********************************/
+.container{
+    position: relative;
+    background-color: black;
+    height: 80vh;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+/************container left*********************/
+.cont-left{
+    width: 30%;
+    background-color: #121212;
+    padding: 10px ;
+    border-radius: 3%;
+}
+.lib-img{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #121212;
+}
+.lib{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.lib span{
+    font-size: 16px;
+    font-weight: 700;
+    color: #b3b3b3;
+}
+.plusImg{
+    cursor: pointer;
+}
+.playlist {
+    height: 60%; /* Adjust based on your layout */
+    max-height: 300px; /* Set a maximum height for the scrollable area */
+    overflow-y: auto; /* Enables vertical scrollbar when content exceeds height */
+    padding: 10px;
+    background-color: #1f1f1f;
+    list-style: none;
+}
+.playlist li {
+    margin-bottom: 5px; /* Adds spacing between items */
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    height: 5vh;
+}
+.FAQS{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    gap: 20px;
+}
+.FAQS li{
+    list-style: none;
+    cursor: pointer;
+    color: #8a663e;
+}
+/************container Right*********************/
+.cont-right{
+    width: 69%;
+    border-radius: 8px;
+    background-color: #121212;
+    overflow-y: auto;
+}
+.Artists{
+    display: flex;
+    gap: 3%;
+    list-style: none;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+.singles{
+    margin: 50px 0;
+}
+.padding{
+    padding: 20px;
+}
+
+/***************************** *Music playeer starts from here************************ */
+.music-player{
+    position: relative;
+    height: 9vh;
+    background-color: #121212;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+.lower{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color:  #9c9494;
+    width: 97%;
+    margin: auto;
+}
+.player-btns{
+    display: flex;
+    gap: 10px;
+    padding-left: 100px;
+    cursor: pointer;
+}
+.sound-dur{
+    display: flex;
+    gap: 30px;
+}
+#playing{
+    position: relative;
+    width: 97%;
+    margin: 0 10px;
+}
+.round{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #121212;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+
+}
+/* ********************************* */
+.album{
+    padding: 0;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+.album-playlist{
+    background-color: #2d1215;
+}
+@media only screen and (max-width: 1049px) {
+   
+}
